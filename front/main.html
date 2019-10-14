@@ -5,12 +5,17 @@
     <title>Nauka języka</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
      <nav>
          <a href="">LOGO</a>
-         <a href="" class="logged">ADMIN</a>
+         <button class="logged" onclick="navbarDropdown()">ADMIN</button>
      </nav>
+     <div class="dropdown" id="dropdown">
+         <a href="">zarządzaj kontem</a>
+         <a href="">wyloguj</a>
+     </div>
 
 </body>
 </html>
