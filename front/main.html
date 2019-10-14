@@ -9,13 +9,21 @@
 </head>
 <body>
      <nav>
-         <a href="">LOGO</a>
-         <button class="logged" onclick="navbarDropdown()">ADMIN</button>
+         <ul>
+             <li><a href="#">FISZKI</a></li>
+             <li><a href="#">ZESTAWY</a></li>
+             <li><a href="#">UŻYTKOWNICY</a></li>
+             <li class="logged">
+                 <a href="javascript:void(0)" class="dropbtn">ADMIN</a>
+                 <div class="logged-content">
+                     <a href="#">zarządzaj kontem</a>
+                     <a href="#">wyloguj</a>
+                 </div>
+             </li>
+         </ul>
      </nav>
-     <div class="dropdown" id="dropdown">
-         <a href="">zarządzaj kontem</a>
-         <a href="">wyloguj</a>
-     </div>
+
+
 
 </body>
 </html>
