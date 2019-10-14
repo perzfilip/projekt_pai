@@ -23,10 +23,12 @@ nav li a, .dropbtn {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: 0.4s;
 }
 
 nav li a:hover, .logged:hover .dropbtn {
-    background-color: red;
+    background-color: white;
+    color: black;
 }
 
 nav li.logged {
@@ -38,7 +40,7 @@ nav li.logged {
 nav .logged-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: white;
     min-width: 160px;
     z-index: 1;
     flex-direction: column;
@@ -55,7 +57,7 @@ nav .logged-content a {
 
 }
 
-nav .logged-content a:hover {background-color: #f1f1f1;}
+nav .logged-content a:hover {background-color: #b8b8b8;}
 
 nav .logged:hover .logged-content {
     display: flex;
