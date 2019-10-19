@@ -68,7 +68,6 @@ nav .logged:hover .logged-content {
 
 main {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     position: relative;
 }
@@ -155,4 +154,86 @@ article:hover .line {
     width: 100%;
 }
 
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
 
+footer p {
+    text-align: center;
+    margin-top: auto;
+    font-weight: lighter;
+    padding: 10px;
+}
+
+footer section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nauka {
+    width: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.glider-slide {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+/*----------------------------*/
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
