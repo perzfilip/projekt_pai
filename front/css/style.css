@@ -70,6 +70,7 @@ main {
     display: flex;
     justify-content: center;
     position: relative;
+    min-height: 100vh;
 }
 
 main > section {
@@ -155,7 +156,6 @@ article:hover .line {
 }
 
 footer {
-    position: fixed;
     width: 100%;
     bottom: 0;
     display: flex;
@@ -163,6 +163,7 @@ footer {
     justify-content: center;
     background-color: black;
     color: white;
+    clear: bottom;
 }
 
 footer p {
@@ -182,36 +183,51 @@ footer section {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-
+    overflow: hidden;
 }
 
-.glider-slide {
+.slider {
+    height: 30vh;
+    margin: auto;
+    width: 31vw;
+    overflow: hidden;
     position: relative;
-    height: 200px;
-    display: flex;
-    justify-content: center;
 }
 
-/*----------------------------*/
+.slides {
+    position: absolute;
+    height: 30vh;
+    width: 300vw;
+    overflow: hidden;
+}
+
+.slide {
+    display: inline-block;
+}
 
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 300px;
+    position: relative;
+    width: 30vw;
+    height: 20vh;
+    margin: 10px;
+
 }
 
 .flip-card-inner {
     position: relative;
+    margin: auto;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.6s;
+    transition: 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px;
 }
 
-.flip-card:hover .flip-card-inner {
+.clicked .flip-card-inner {
     transform: rotateY(180deg);
+    background-color: black;
 }
 
 .flip-card-front, .flip-card-back {
@@ -219,21 +235,22 @@ footer section {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    display: table;
 }
 
 .flip-card-front {
-    background-color: #bbb;
+    background-color: white;
     color: black;
+
 }
 
 .flip-card-back {
-    background-color: #2980b9;
     color: white;
     transform: rotateY(180deg);
 }
 
-.flip-card-inner div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.flip-card-front span, .flip-card-back span {
+    display: table-cell;
+    vertical-align: middle;
 }
+
