@@ -179,38 +179,80 @@ footer section {
 }
 
 .nauka {
-    width: 50%;
+    width: 45%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
 }
 
 .slider {
     height: 30vh;
     margin: auto;
-    width: 31vw;
+    width: 33vw;
     overflow: hidden;
     position: relative;
 }
 
-.slides {
-    position: absolute;
-    height: 30vh;
-    width: 300vw;
-    overflow: hidden;
+.nauka button i {
+    font-size: 3em;
+}
+
+.nauka button {
+    border: none;
+    background-color: transparent;
 }
 
 .slide {
     display: inline-block;
+    z-index: -1;
+    margin: 1vw;
 }
+
+.slide:first-child {
+    margin-left: 0.5vw;
+}
+
+/*----------------------------------------------------*/
+/*TEST*/
+.slides {
+    transition: 0.5s ease-in-out;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.slide {
+    /*display: none;*/
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.slide:first-child {
+    opacity: 1;
+}
+
+.slides:hover .slide:nth-child(2) {
+    /*opacity: 1;*/
+    /*display: inline-block;*/
+}
+/*----------------------------------------------------*/
+.slides {
+    margin-top: 30px;
+    position: absolute;
+    height: 30vh;
+    /*width: 300vw;*/
+    overflow: hidden;
+}
+
+
 
 .flip-card {
     background-color: transparent;
     position: relative;
     width: 30vw;
     height: 20vh;
-    margin: 10px;
 
 }
 
@@ -253,4 +295,6 @@ footer section {
     display: table-cell;
     vertical-align: middle;
 }
+
+
 
