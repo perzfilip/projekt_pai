@@ -17,16 +17,10 @@ function nextSlide() {
     if(slidesArray.length>focusedSlide+1) {
         slidesArray[focusedSlide + 1].style.opacity = "1";
 
-
         //przesunac fiszki
-        offset -= 32.23; //todo skalibrować o ile to powinno się dokładnie przesuwać
+        offset -= 32.235; //todo jednak nie robic tego vw
         slides[0].style.transform = "translate(" + offset + "vw)";
         slidesArray[focusedSlide].children[0].classList.remove('clicked');
-        // let x = focusedSlide;
-        // setTimeout(function () {
-        //     slidesArray[x].style.opacity = "0";
-        // }, 500);
-
 
         //zmienic aktualna fiszke
         focusedSlide++;
@@ -37,7 +31,7 @@ function prevSlide() {
     if(focusedSlide>=1) {
         slidesArray[focusedSlide-1].style.opacity = "1";
 
-        offset += 32.26;
+        offset += 32.235;
         slides[0].style.transform = "translate(" + offset + "vw)";
         slidesArray[focusedSlide].children[0].classList.remove('clicked');
         // slidesArray[focusedSlide].style.opacity = "0";

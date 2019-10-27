@@ -212,7 +212,7 @@ footer section {
 }
 
 .slide:first-child {
-    margin-left: 0.5vw;
+    margin-left: 1.5vw;
 }
 
 /*----------------------------------------------------*/
@@ -224,7 +224,6 @@ footer section {
 }
 
 .slide {
-    /*display: none;*/
     opacity: 0;
     transition: 0.2s;
 }
@@ -233,20 +232,13 @@ footer section {
     opacity: 1;
 }
 
-.slides:hover .slide:nth-child(2) {
-    /*opacity: 1;*/
-    /*display: inline-block;*/
-}
 /*----------------------------------------------------*/
 .slides {
     margin-top: 30px;
     position: absolute;
     height: 30vh;
-    /*width: 300vw;*/
     overflow: hidden;
 }
-
-
 
 .flip-card {
     background-color: transparent;
