@@ -10,6 +10,10 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+body, html {
+    height: 100%;
+}
+
 nav ul {
     list-style-type: none;
     overflow: hidden;
@@ -66,11 +70,61 @@ nav .logged:hover .logged-content {
     display: flex;
 }
 
+/*-------------------------------------------*/
+/*STRONA STARTOWA*/
+body.start_page {
+    background-image: url("../img/library.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav.start_page > ul {
+    background-color: transparent;
+}
+
+
+footer.start_page {
+    position: fixed;
+    background-color: transparent;
+}
+
+main.start_page section {
+    margin-top: 10%;
+    text-shadow: 4px  4px 6px black;
+    color: white;
+}
+
+main.start_page section h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+
+
+main.start_page section p {
+    text-align: center;
+    text-shadow: 2px  2px 2px black;
+    font-size: 1.5em;
+}
+
+.shadow{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    position: relative;
+    width: 70%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 6px black;
+}
+
+/*-------------------------------------------*/
+
 main {
     display: flex;
     justify-content: center;
     position: relative;
-    min-height: 100vh;
 }
 
 main > section {
@@ -80,7 +134,7 @@ main > section {
 
 main > section > h1 {
     text-align: center;
-    font-size: 3vw;
+    font-size: 3em;
 }
 
 #fiszki {
@@ -287,6 +341,7 @@ footer section {
     display: table-cell;
     vertical-align: middle;
 }
+
 
 
 

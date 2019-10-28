@@ -1,7 +1,3 @@
-function navbarDropdown() {
-    document.getElementById("dropdown").classList.toggle("show");
-}
-
 function clicked(elem) {
    if(elem.classList.contains('clicked'))
         elem.classList.remove('clicked');
