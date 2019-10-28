@@ -11,22 +11,49 @@
     <ul>
         <li><a href="#">ZALOGUJ SIĘ</a></li>
         <li><a href="#">ZAREJESTRUJ SIĘ</a></li>
-<!--        na stronie startowej tego nie bedzie-->
-<!--        <li class="logged">-->
-<!--            <a class="dropbtn" href="javascript:void(0)">ADMIN</a>-->
-<!--            <div class="logged-content">-->
-<!--                <a href="#">zarządzaj kontem</a>-->
-<!--                <a href="#">wyloguj</a>-->
-<!--            </div>-->
-<!--        </li>-->
+        <!--        na stronie startowej tego nie bedzie-->
+        <!--        <li class="logged">-->
+        <!--            <a class="dropbtn" href="javascript:void(0)">ADMIN</a>-->
+        <!--            <div class="logged-content">-->
+        <!--                <a href="#">zarządzaj kontem</a>-->
+        <!--                <a href="#">wyloguj</a>-->
+        <!--            </div>-->
+        <!--        </li>-->
     </ul>
 </nav>
 <main class="start_page">
-    <section>
-        <div class="shadow">
-        <h1>Langix 3000</h1>
-        <p>Serwis, który pozwoli ci nauczyć się potrzebnego słownictwa w mgnieniu oka!</p>
+    <!--    DLA TESTU ZAKOMENTOWANE ALE POTRZEBNE NIE USUWAĆ-->
+    <!--    <section id="welcome">-->
+    <!--        <div class="shadow">-->
+    <!--        <h1>Langix 3000</h1>-->
+    <!--        <p>Serwis, który pozwoli ci nauczyć się potrzebnego słownictwa w mgnieniu oka!</p>-->
+    <!--        </div>-->
+    <!--    </section>-->
+    <section class="login_form shadow">
+        <h2>Logowanie</h2>
+        <div>
+            <form action="">
+                <!-- action na razie puste, bedzie plik main.php -->
+                <div class="input">
+                    <div>
+                        <input type="text" name="login" placeholder=" " required>
+                        <span>Login</span>
+                    </div>
+                </div>
+                <div class="input">
+                    <div>
+                    <input type="password" name="password" placeholder=" " required>
+                    <span>Hasło</span>
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" value="Zaloguj">
+                </div>
+
+            </form>
         </div>
+    </section>
+    <section class="register_form">
     </section>
 </main>
 <footer class="start_page">
@@ -35,7 +62,6 @@
         <p>kontakt: perzfilip@gmail.com</p>
     </section>
 </footer>
-
 <script src="js/script.js"></script>
 </body>
 </html>

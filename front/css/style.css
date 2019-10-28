@@ -89,7 +89,10 @@ footer.start_page {
     position: fixed;
     background-color: transparent;
 }
-
+main.start_page {
+    flex-direction: column;
+    align-items: center;
+}
 main.start_page section {
     margin-top: 10%;
     text-shadow: 4px  4px 6px black;
@@ -101,23 +104,92 @@ main.start_page section h1 {
     text-align: center;
 }
 
-
-
 main.start_page section p {
     text-align: center;
     text-shadow: 2px  2px 2px black;
     font-size: 1.5em;
 }
 
-.shadow{
+#welcome {
     padding-top: 5%;
     padding-bottom: 5%;
     position: relative;
     width: 70%;
+}
+
+.shadow{
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px 6px black;
 }
+
+.login_form {
+    text-align: center;
+    padding: 0;
+    width: 40%;
+}
+
+.login_form h2 {
+    font-size: 2.5em;
+}
+
+.input {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.input div {
+    display: inline-block;
+    position: relative;
+}
+
+.input span {
+    font-size: 1.5em;
+    transform-origin: left top;
+    transition: 0.3s;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+
+.input input {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    color: white;
+    z-index: 2;
+    font-size: 1.8em;
+    transition: 0.3s;
+}
+
+/*--- ANIMACJA INPUTA ---*/
+
+.input input:focus + span {
+    color: red;
+    transform: translateY(-26px) scale(0.70);
+
+}
+.input input:not(:placeholder-shown) + span
+{
+    color: red;
+    transform: translateY(-26px) scale(0.70);
+}
+
+.input input:not(:focus) + span {
+    color: white;
+}
+
+.input input:focus {
+    border-bottom: 2px solid red;
+}
+
+/*--- KONIEC ---*/
+
+
+
 
 /*-------------------------------------------*/
 
