@@ -9,7 +9,7 @@
 <body class="start_page">
 <nav class="start_page">
     <ul>
-        <li><a href="#">ZALOGUJ SIĘ</a></li>
+        <li><a onclick="login_animate()">ZALOGUJ SIĘ</a></li>
         <li><a href="#">ZAREJESTRUJ SIĘ</a></li>
         <!--        na stronie startowej tego nie bedzie-->
         <!--        <li class="logged">-->
@@ -23,12 +23,12 @@
 </nav>
 <main class="start_page">
     <!--    DLA TESTU ZAKOMENTOWANE ALE POTRZEBNE NIE USUWAĆ-->
-<!--        <section id="welcome">-->
-<!--            <div class="shadow">-->
-<!--            <h1>Langix 3000</h1>-->
-<!--            <p>Serwis, który pozwoli ci nauczyć się potrzebnego słownictwa w mgnieniu oka!</p>-->
-<!--            </div>-->
-<!--        </section>-->
+        <section id="welcome" class="">
+            <div class="shadow">
+            <h1>Langix 3000</h1>
+            <p>Serwis, który pozwoli ci nauczyć się potrzebnego słownictwa w mgnieniu oka!</p>
+            </div>
+        </section>
     <section class="login_form shadow">
         <h2>Logowanie</h2>
         <div>
@@ -46,14 +46,20 @@
                         <span>Hasło</span>
                     </div>
                 </div>
-                <div class="submit">
+                <div class="submit przycisk">
                     <div>
                         <input type="submit" value="Zaloguj">
                         <span></span>
                         <span></span>
                     </div>
                 </div>
-
+                <div class="back przycisk">
+                    <div>
+                        <button type="button" onclick="login_deanimate()">Powrót</button>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </form>
         </div>
     </section>

@@ -84,7 +84,6 @@ nav.start_page > ul {
     background-color: transparent;
 }
 
-
 footer.start_page {
     position: fixed;
     background-color: transparent;
@@ -92,9 +91,10 @@ footer.start_page {
 main.start_page {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 70%;
 }
 main.start_page section {
-    margin-top: 10%;
     text-shadow: 4px  4px 6px black;
     color: white;
 }
@@ -109,6 +109,7 @@ main.start_page section p {
     text-shadow: 2px  2px 2px black;
     font-size: 1.5em;
 }
+
 
 #welcome > div{
     padding-top: 5%;
@@ -132,6 +133,24 @@ main.start_page section p {
 .login_form h2 {
     font-size: 2.5em;
 }
+
+/*============ANIMACJA ZMIANY OKIENKA==============*/
+
+.login_form {
+    position: absolute;
+    opacity: 0;
+}
+
+#welcome {
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.login_form {
+    transition: 0.4s;
+}
+
+/*============KONIEC==============*/
 
 .input {
     padding-top: 50px;
@@ -188,7 +207,13 @@ main.start_page section p {
 
 /*--- KONIEC ---*/
 
-.submit div{
+.przycisk {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.przycisk div{
     display: inline-block;
     position: relative;
 }
@@ -203,7 +228,17 @@ main.start_page section p {
     margin: auto;
 }
 
-.submit span {
+.back button {
+    padding: 10px 20px 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    outline: none;
+    margin: auto;
+}
+
+.przycisk span {
     position: absolute;
     height: 2px;
     background-color: white;
@@ -211,17 +246,21 @@ main.start_page section p {
     transition: width 0.3s ease-in-out;
 }
 
-.submit span:nth-child(2) {
+.przycisk span:nth-child(2) {
     top: 0;
     left: 0;
 }
 
-.submit span:last-child{
+.przycisk span:last-child{
     bottom: 0;
     right: 0;
 }
 
 .submit input:hover ~ span{
+    width: 100%;
+}
+
+.back button:hover ~ span {
     width: 100%;
 }
 
