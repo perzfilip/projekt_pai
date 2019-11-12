@@ -13,26 +13,38 @@ function sliderInit() {
 }
 
 function nextSlide() {
-    //wlaczyc widocznosc na kolejnej fiszce
     if(slidesArray.length>focusedSlide+1) {
-        slidesArray[focusedSlide + 1].style.opacity = "1";
 
-        //przesunac fiszki
-        offset -= 32.235; //todo jednak nie robic tego vw
-        slides[0].style.transform = "translate(" + offset + "vw)";
+        let current = slidesArray[focusedSlide];
+        let next = slidesArray[focusedSlide+1];
+        if(slidesArray.length>focusedSlide+2)
+            slidesArray[focusedSlide + 2].style.display = "block";
+
+        current.style.transform = "translateY(200px)";
+        current.style.opacity = 0;
+        next.style.opacity = 1;
+        next.style.zIndex = 1;
+        current.style.zIndex = 0;
+        current.style.visibility = "none";
+
         slidesArray[focusedSlide].children[0].classList.remove('clicked');
 
-        //zmienic aktualna fiszke
         focusedSlide++;
     }
 }
 
 function prevSlide() {
     if(focusedSlide>=1) {
-        slidesArray[focusedSlide-1].style.opacity = "1";
+        let current = slidesArray[focusedSlide];
+        let next = slidesArray[focusedSlide-1];
+            slidesArray[focusedSlide - 1].style.visibility = "visible";
 
-        offset += 32.235;
-        slides[0].style.transform = "translate(" + offset + "vw)";
+        next.style.transform = "translateY(0)";
+        current.style.opacity = 0;
+        next.style.opacity = 1;
+        next.style.zIndex = 1;
+        current.style.zIndex = 0;
+        current.style.visibility = "none";
         slidesArray[focusedSlide].children[0].classList.remove('clicked');
         // slidesArray[focusedSlide].style.opacity = "0";
 

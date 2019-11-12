@@ -2,37 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nauka języka</title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>test</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0c34582f69.js" crossorigin="anonymous"></script>
-    <script src="js/slider.js"></script>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="#">FISZKI</a></li>
-        <li><a href="#">ZESTAWY</a></li>
-        <li><a href="#">UŻYTKOWNICY</a></li>
-        <li class="logged">
-            <a class="dropbtn" href="javascript:void(0)">ADMIN</a>
-            <div class="logged-content">
-                <a href="#">zarządzaj kontem</a>
-                <a href="#">wyloguj</a>
-            </div>
-        </li>
-    </ul>
-</nav>
 <main>
     <section>
         <h1>Nauka fiszek</h1>
         <section class="nauka">
-
+            <button onclick="prevSlide()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
             <!--            todo zrobić to responzywne-->
             <div class="slider">
-                <button onclick="prevSlide()">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
                 <div class="slides">
                     <div class="slide">
                         <div class="flip-card" onclick="clicked(this)">
@@ -50,7 +34,7 @@
                         <div class="flip-card" onclick="clicked(this)">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <span>Słówko2</span>
+                                    <span>Słówko</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <span>definicja</span>
@@ -62,7 +46,7 @@
                         <div class="flip-card" onclick="clicked(this)">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <span>Słówko3</span>
+                                    <span>Słówko</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <span>definicja</span>
@@ -74,7 +58,7 @@
                         <div class="flip-card" onclick="clicked(this)">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <span>Słówko4</span>
+                                    <span>Słówko</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <span>definicja</span>
@@ -2351,25 +2335,15 @@
                         </div>
                     </div>
                 </div>
-                <button onclick="nextSlide();">
-                    <i class="fas fa-arrow-right"></i>
-                </button>
             </div>
-
+            <button onclick="nextSlide();">
+                <i class="fas fa-arrow-right"></i>
+            </button>
         </section>
-<!--        testowe p -->
-        <p style="text-align: center;">Słówko1</p>
-        <p style="text-align: center;">Słówko</p>
-<!--        koniec testowych p-->
-    </section>
-</main>
-<footer>
-    <section>
-        <p>Strona stworzona przez Filipa Perza, &copy; 2019</p>
-        <p>kontakt: perzfilip@gmail.com</p>
-    </section>
-</footer>
-<script src="js/script.js"></script>
 
+
+<script>
+
+</script>
 </body>
 </html>
