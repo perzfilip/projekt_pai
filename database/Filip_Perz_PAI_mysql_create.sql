@@ -1,5 +1,5 @@
 CREATE TABLE `Users` (
-	`user_id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`user_id` INT NOT NULL UNIQUE,
 	`login` varchar(30) NOT NULL UNIQUE,
 	`password` varchar(255) NOT NULL,
 	`firstName` varchar(30) NOT NULL,
@@ -56,6 +56,13 @@ CREATE TABLE `Sets_to_classes` (
 	PRIMARY KEY (`class`,`set`)
 );
 
+CREATE TABLE `users_progress` (
+	`user` INT NOT NULL,
+	`set` INT NOT NULL,
+	`progress` INT,
+	PRIMARY KEY (`user`,`set`)
+);
+
 ALTER TABLE `Users` ADD CONSTRAINT `Users_fk0` FOREIGN KEY (`status`) REFERENCES `Status`(`status_id`);
 
 ALTER TABLE `Users` ADD CONSTRAINT `Users_fk1` FOREIGN KEY (`role`) REFERENCES `Roles`(`role_id`);
@@ -71,4 +78,8 @@ ALTER TABLE `Flashcards` ADD CONSTRAINT `Flashcards_fk0` FOREIGN KEY (`Set`) REF
 ALTER TABLE `Sets_to_classes` ADD CONSTRAINT `Sets_to_classes_fk0` FOREIGN KEY (`class`) REFERENCES `Classes`(`class_id`);
 
 ALTER TABLE `Sets_to_classes` ADD CONSTRAINT `Sets_to_classes_fk1` FOREIGN KEY (`set`) REFERENCES `Sets`(`set_id`);
+
+ALTER TABLE `users_progress` ADD CONSTRAINT `users_progress_fk0` FOREIGN KEY (`user`) REFERENCES `Users`(`user_id`);
+
+ALTER TABLE `users_progress` ADD CONSTRAINT `users_progress_fk1` FOREIGN KEY (`set`) REFERENCES `Sets`(`set_id`);
 
