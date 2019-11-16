@@ -21,5 +21,11 @@ function login_deanimate() {
     login.style.opacity = "0";
 }
 
+function multiselect(elem) {
+    elem.classList.toggle("unwrap");
+    let list = elem.children[1];
+    list.classList.toggle("unvisible");
+
+}
 
 

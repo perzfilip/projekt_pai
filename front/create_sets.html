@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nauka języka</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c34582f69.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="#">FISZKI</a></li>
+        <li><a href="#">ZESTAWY</a></li>
+        <li><a href="#">UŻYTKOWNICY</a></li>
+        <li class="logged">
+            <a class="dropbtn" href="javascript:void(0)">ADMIN</a>
+            <div class="logged-content">
+                <a href="#">zarządzaj kontem</a>
+                <a href="#">wyloguj</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<main class="sets">
+    <section>
+        <h1>Stwórz nowy zestaw</h1>
+        <section id="set_modify">
+            <div class="input">
+                <div>
+                    <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                    <span>Nazwa zestawu</span>
+                </div>
+            </div>
+            <div class="multi-select" onclick="multiselect(this);">
+                <span>Wybierz klasy</span>
+                <div class="list unvisible">
+                    <p>asfdasd</p>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+<footer>
+    <section>
+        <p>Strona stworzona przez Filipa Perza, &copy; 2019</p>
+        <p>kontakt: perzfilip@gmail.com</p>
+    </section>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
