@@ -99,7 +99,7 @@ main.start_page {
 }
 
 main.start_page section {
-    text-shadow: 4px  4px 6px black;
+    text-shadow: 4px 4px 6px black;
     color: white;
 }
 
@@ -110,18 +110,18 @@ main.start_page section h1 {
 
 main.start_page section p {
     text-align: center;
-    text-shadow: 2px  2px 2px black;
+    text-shadow: 2px 2px 2px black;
     font-size: 1.5em;
 }
 
-#welcome > div{
+#welcome > div {
     padding-top: 5%;
     padding-bottom: 5%;
     position: relative;
     width: 70%;
 }
 
-.shadow{
+.shadow {
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px 6px black;
@@ -216,7 +216,7 @@ main.start_page section p {
     margin-right: 10px;
 }
 
-.przycisk div{
+.przycisk div {
     display: inline-block;
     position: relative;
 }
@@ -254,12 +254,12 @@ main.start_page section p {
     left: 0;
 }
 
-.przycisk span:last-child{
+.przycisk span:last-child {
     bottom: 0;
     right: 0;
 }
 
-.submit input:hover ~ span{
+.submit input:hover ~ span {
     width: 100%;
 }
 
@@ -323,17 +323,17 @@ main > section > h1 {
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-#fiszki article  div {
+#fiszki article div {
     padding: 0 20px 0 20px;
     display: flex;
     flex-direction: column;
 }
 
-#fiszki article div  h3, #fiszki article p {
+#fiszki article div h3, #fiszki article p {
     text-align: center;
 }
 
-#fiszki article  div h3 {
+#fiszki article div h3 {
     padding-top: 15px;
     padding-bottom: 10px;
     font-size: 1.5em;
@@ -364,7 +364,7 @@ article:hover .line {
     margin-top: 50px;
 }
 
-#flashcards_men > div{
+#flashcards_men > div {
     width: 50%;
     margin: auto;
     padding: 20px;
@@ -436,11 +436,11 @@ footer section {
     background-color: transparent;
 }
 
-.slider button:last-of-type{
+.slider button:last-of-type {
     right: 0;
 }
 
-.slider button:first-of-type{
+.slider button:first-of-type {
     left: 0;
 }
 
@@ -540,6 +540,7 @@ footer section {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-top: 30px;
 }
 
 #set_modify .input {
@@ -593,12 +594,13 @@ footer section {
     transition: 0.3s ease-in-out;
 }
 
-/*animacja list*/
+
+/*animacja list, radio i checkboxow*/
 .unwrap {
     height: 150px;
 }
 
-.list_trigger {
+.list_trigger, .save {
     border: 1px solid transparent;
     outline: none;
     font-size: 1.1em;
@@ -609,6 +611,15 @@ footer section {
     transition: 0.2s;
 }
 
+.save {
+    background-color: #2a8eff;
+    font-size: 1.3em;
+}
+
+.save:hover {
+    background-color: #5fcc00;
+}
+
 .list_trigger:hover {
     background-color: white;
     color: black;
@@ -616,7 +627,7 @@ footer section {
 }
 
 .list::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #F5F5F5;
 }
 
@@ -656,7 +667,7 @@ footer section {
     display: inline-block;
 }
 
-.checkbox label::before{
+.checkbox label::before {
     height: 16px;
     width: 16px;
     border: 1px solid;
@@ -667,7 +678,7 @@ footer section {
 .checkbox label::after {
     height: 5px;
     width: 8px;
-    border-left: 2px solid ;
+    border-left: 2px solid;
     border-bottom: 2px solid;
     transform: rotate(-45deg);
     left: 4px;
@@ -706,8 +717,6 @@ footer section {
     color: white;
 }
 
-
-/*===============test==============*/
 .checkbox input[type="radio"] + label::after {
     content: none;
 }
@@ -727,6 +736,53 @@ footer section {
 .checkbox input[type="radio"] {
     opacity: 0;
 }
+
+/*fiszki przy modyfikacji*/
+
+#flashcards_mod {
+    margin-top: 150px;
+}
+#flashcards_mod input:focus + span {
+    color: #0085ff;
+}
+
+#flashcards_mod input:not(:placeholder-shown) + span {
+    color: #0085ff;
+}
+
+#flashcards_mod input:not(:focus) + span {
+    color: black;
+}
+
+#flashcards_mod input {
+    border-bottom: 2px solid black;
+}
+
+#flashcards_mod input:focus {
+    border-bottom: 2px solid #0085ff;
+}
+
+#flashcards_mod input {
+    color: black;
+}
+
+.one_flashcard {
+    width: 70%;
+    box-shadow: 0 8px 15px -5px rgba(0,0,0,0.75);
+    margin: 0 auto 40px;
+}
+
+.one_flashcard .input {
+    display: inline-block;
+    padding: 50px;
+}
+
+.one_flashcard .input:last-of-type {
+    float: right;
+}
+
+
+
 
 
 
