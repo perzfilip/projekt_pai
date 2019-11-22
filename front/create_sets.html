@@ -26,7 +26,7 @@
     <section>
         <h1>Stwórz nowy zestaw</h1>
         <section id="set_modify">
-            <div class="input">
+            <div class="input set_title">
                 <div>
                     <input type="text" name="title" placeholder=" " autocomplete="off" required>
                     <span>Nazwa zestawu</span>
@@ -109,19 +109,10 @@
                             <span>Definicja</span>
                         </div>
                     </div>
-                </div>
-                <div class="one_flashcard">
-                    <div class="input">
-                        <div>
-                            <input type="text" name="title" placeholder=" " autocomplete="off" required>
-                            <span>Słówko</span>
-                        </div>
-                    </div>
-                    <div class="input">
-                        <div>
-                            <input type="text" name="title" placeholder=" " autocomplete="off" required>
-                            <span>Definicja</span>
-                        </div>
+                    <div class="delete">
+                        <button>
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="one_flashcard">
@@ -137,19 +128,10 @@
                             <span>Definicja</span>
                         </div>
                     </div>
-                </div>
-                <div class="one_flashcard">
-                    <div class="input">
-                        <div>
-                            <input type="text" name="title" placeholder=" " autocomplete="off" required>
-                            <span>Słówko</span>
-                        </div>
-                    </div>
-                    <div class="input">
-                        <div>
-                            <input type="text" name="title" placeholder=" " autocomplete="off" required>
-                            <span>Definicja</span>
-                        </div>
+                    <div class="delete">
+                        <button>
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="one_flashcard">
@@ -165,6 +147,11 @@
                             <span>Definicja</span>
                         </div>
                     </div>
+                    <div class="delete">
+                        <button>
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="one_flashcard">
                     <div class="input">
@@ -179,9 +166,35 @@
                             <span>Definicja</span>
                         </div>
                     </div>
+                    <div class="delete">
+                        <button>
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
                 </div>
+                <div class="one_flashcard">
+                    <div class="input">
+                        <div>
+                            <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                            <span>Słówko</span>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div>
+                            <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                            <span>Definicja</span>
+                        </div>
+                    </div>
+                    <div class="delete">
+                        <button>
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+
             </div>
-            <button onclick="menageFlashcard(-1);">Dodaj fiszkę</button>
+            <button class="add_flashcard">Dodaj fiszkę</button>
         </section>
     </section>
 </main>

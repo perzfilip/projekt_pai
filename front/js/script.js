@@ -1,3 +1,4 @@
+
 function clicked(elem) {
    if(elem.classList.contains('clicked'))
         elem.classList.remove('clicked');
@@ -25,17 +26,40 @@ function wrap(elem) {
     elem.nextElementSibling.classList.toggle("unwrap");
 }
 
-function menageFlashcard(a) {
-    let flashcards = document.querySelectorAll("div.one_flashcard");
-    let parent = flashcards[0].parentNode;
-    a = parseInt(a);
-    if(a === -1) {
-        let div = document.createElement("div");
-        div.classList.add("one_flashcard");
-        div.innerHTML =  '<div class="input"><div><input type="text" name="title" placeholder=" " autocomplete="off" required><span>Słówko</span></div></div><div class="input"><div><input type="text" name="title" placeholder=" " autocomplete="off" required><span>Definicja</span></div></div>';
-        flashcards[0].parentNode.append(div);
-    } else {
-        //todo usuwanie do zaimplementowania
-        parent.removeChild(flashcards[a]);
+let deleteButtons;
+
+function initListeners() {
+    deleteButtons = document.querySelectorAll("div.one_flashcard > .delete > button");
+
+    for(let i=0; i<deleteButtons.length; i++) {
+        if(!deleteButtons[i].classList.contains("y")) {
+            deleteButtons[i].addEventListener("click", deleteFlashcard);
+            deleteButtons[i].classList.add("y");
+        }
     }
 }
+
+function addFlashcard() {
+    let div = document.createElement("div");
+    div.classList.add("one_flashcard");
+    div.innerHTML = '<div class="input"><div><input type="text" name="title" placeholder=" " autocomplete="off" required><span>Słówko</span></div></div><div class="input"><div><input type="text" name="title" placeholder=" " autocomplete="off" required><span>Definicja</span></div></div><div class="delete"><button><i class="fas fa-trash-alt"></i></button></div>';
+    let flashcards = document.querySelector("#flashcards_mod > div");
+    console.dir(div);
+    div.lastChild.addEventListener("click", deleteFlashcard);
+    flashcards.appendChild(div);
+}
+
+function deleteFlashcard(e) {
+    let x = e.target;
+    x = x.parentNode.parentNode.parentNode;
+    x.remove();
+}
+
+window.onload = initListeners();
+
+document.querySelector("button.add_flashcard").addEventListener("click", addFlashcard);
+
+
+
+
+

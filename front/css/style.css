@@ -533,6 +533,7 @@ footer section {
 
 .sets > section {
     min-height: 80vh;
+    width: 100%;
 }
 
 #set_modify {
@@ -600,7 +601,7 @@ footer section {
     height: 150px;
 }
 
-.list_trigger, .save {
+.list_trigger, .save, .add_flashcard {
     border: 1px solid transparent;
     outline: none;
     font-size: 1.1em;
@@ -609,6 +610,13 @@ footer section {
     border-radius: 5px;
     color: white;
     transition: 0.2s;
+}
+
+.add_flashcard {
+    font-size: 1.3em;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .save {
@@ -620,7 +628,7 @@ footer section {
     background-color: #5fcc00;
 }
 
-.list_trigger:hover {
+.list_trigger:hover, .add_flashcard:hover {
     background-color: white;
     color: black;
     border: inset 1px black;
@@ -741,6 +749,7 @@ footer section {
 
 #flashcards_mod {
     margin-top: 150px;
+    margin-bottom: 50px;
 }
 #flashcards_mod input:focus + span {
     color: #0085ff;
@@ -770,16 +779,63 @@ footer section {
     width: 70%;
     box-shadow: 0 8px 15px -5px rgba(0,0,0,0.75);
     margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 }
 
 .one_flashcard .input {
     display: inline-block;
     padding: 50px;
+    width: 30%;
 }
 
-.one_flashcard .input:last-of-type {
-    float: right;
+.delete {
+    margin-right: 2%;
 }
+
+.delete button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 1360px) {
+    .one_flashcard {
+        width: 90%;
+    }
+}
+
+@media (max-width: 970px) {
+    .sets .input input{
+        width: 250px;
+    }
+
+    .sets {
+        font-size: 0.9em;
+    }
+    .sets .input input, .sets .input span {
+        font-size: 1.3em;
+    }
+
+    #set_modify {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #set_modify > .input {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .set_title {
+        width: 100%;
+        font-size: 1.4em;
+    }
+}
+
+
 
 
 
