@@ -29,7 +29,7 @@
             <section id="set_modify">
                 <div class="input set_title">
                     <div>
-                        <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                        <input type="text" name="setTitle" placeholder=" " autocomplete="off" required>
                         <span>Nazwa zestawu</span>
                     </div>
                 </div>
@@ -67,27 +67,27 @@
                     <button type="button" class="list_trigger" onclick="wrap(this);">Wybierz klasy</button>
                     <div class="list">
                         <div class="checkbox">
-                            <input type="checkbox" id="checkbox_1" checked>
+                            <input type="checkbox" id="checkbox_1" name="class[]" checked>
                             <label for="checkbox_1">1D</label>
                             <span class="bgc"></span>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" id="checkbox_2">
+                            <input type="checkbox" id="checkbox_2" name="class[]">
                             <label for="checkbox_2">2D</label>
                             <span class="bgc"></span>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" id="checkbox_3">
+                            <input type="checkbox" id="checkbox_3" name="class[]">
                             <label for="checkbox_3">3D</label>
                             <span class="bgc"></span>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" id="checkbox_4">
+                            <input type="checkbox" id="checkbox_4" name="class[]">
                             <label for="checkbox_4">4D</label>
                             <span class="bgc"></span>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" id="checkbox_5">
+                            <input type="checkbox" id="checkbox_5" name="class[]">
                             <label for="checkbox_5">1D</label>
                             <span class="bgc"></span>
                         </div>
@@ -100,13 +100,13 @@
                     <div class="one_flashcard">
                         <div class="input">
                             <div>
-                                <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                                <input type="text" name="slowko[]" placeholder=" " autocomplete="off" required>
                                 <span>Słówko</span>
                             </div>
                         </div>
                         <div class="input">
                             <div>
-                                <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                                <input type="text" name="definicja[]" placeholder=" " autocomplete="off" required>
                                 <span>Definicja</span>
                             </div>
                         </div>
@@ -119,13 +119,13 @@
                     <div class="one_flashcard">
                         <div class="input">
                             <div>
-                                <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                                <input type="text" name="slowko[]" placeholder=" " autocomplete="off" required>
                                 <span>Słówko</span>
                             </div>
                         </div>
                         <div class="input">
                             <div>
-                                <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                                <input type="text" name="definicja[]" placeholder=" " autocomplete="off" required>
                                 <span>Definicja</span>
                             </div>
                         </div>
@@ -138,13 +138,13 @@
                     <div class="one_flashcard">
                         <div class="input">
                             <div>
-                                <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                                <input type="text" name="slowko[]" placeholder=" " autocomplete="off" required>
                                 <span>Słówko</span>
                             </div>
                         </div>
                         <div class="input">
                             <div>
-                                <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                                <input type="text" name="definicja[]" placeholder=" " autocomplete="off" required>
                                 <span>Definicja</span>
                             </div>
                         </div>
@@ -157,13 +157,13 @@
                     <div class="one_flashcard">
                         <div class="input">
                             <div>
-                                <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                                <input type="text" name="slowko[]" placeholder=" " autocomplete="off" required>
                                 <span>Słówko</span>
                             </div>
                         </div>
                         <div class="input">
                             <div>
-                                <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                                <input type="text" name="definicja[]" placeholder=" " autocomplete="off" required>
                                 <span>Definicja</span>
                             </div>
                         </div>
@@ -176,13 +176,13 @@
                     <div class="one_flashcard">
                         <div class="input">
                             <div>
-                                <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                                <input type="text" name="slowko[]" placeholder=" " autocomplete="off" required>
                                 <span>Słówko</span>
                             </div>
                         </div>
                         <div class="input">
                             <div>
-                                <input type="text" name="title" placeholder=" " autocomplete="off" required>
+                                <input type="text" name="definicja[]" placeholder=" " autocomplete="off" required>
                                 <span>Definicja</span>
                             </div>
                         </div>
@@ -192,10 +192,33 @@
                             </button>
                         </div>
                     </div>
-
-
+                    <div class="one_flashcard">
+                        <div class="input">
+                            <div>
+                                <input type="text" name="slowko[]" placeholder=" " autocomplete="off" required>
+                                <span>Słówko</span>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <div>
+                                <input type="text" name="definicja[]" placeholder=" " autocomplete="off" required>
+                                <span>Definicja</span>
+                            </div>
+                        </div>
+                        <div class="delete">
+                            <button type="button">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <button type="button" class="add_flashcard">Dodaj fiszkę</button>
+                <div class="add_buttons">
+                    <button type="button" class="add_flashcard">Dodaj fiszkę</button>
+                    <div>
+                        <input type="number" id="flashcardNumber">
+                        <button type="button" class="add_flashcard">dodaj fiszki</button>
+                    </div>
+                </div>
             </section>
         </section>
     </form>
@@ -211,10 +234,7 @@
 </body>
 </html>
 <!--
-todo dodawanie kilku fiszek na raz
 todo tabowanie miedzy fiszkami zeby pokazywalo kolejne
-todo wrzucic to wszystko w forma bo to musi byc formularz
-todo ogarnac inputy zeby do jednej tablicy dawaly dane
 todo zrobic podstrone zarzadzanie kontem
 todo zarzadzanie uzytkownikami
 todo spiac wszystko razem zeby przeklikiwanie itp wszystko dzialalo

@@ -769,11 +769,11 @@ footer section {
     color: black;
 }
 
-#flashcards_mod input {
+#flashcards_mod input[type="text"] {
     border-bottom: 2px solid black;
 }
 
-#flashcards_mod input:focus {
+#flashcards_mod input[type="text"]:focus {
     border-bottom: 2px solid #0085ff;
 }
 
@@ -805,6 +805,44 @@ footer section {
     background-color: transparent;
     border: none;
     font-size: 1.3em;
+}
+
+.add_buttons {
+    text-align: center;
+}
+
+.add_buttons > div > input[type="number"]:focus {
+    outline: none !important;
+}
+
+.add_buttons div input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.add_buttons > div > input[type="number"] {
+    text-align: center;
+    margin: 0;
+    border: none;
+    width: 80px;
+    font-size: 1.3em;
+    outline: none;
+    float: left;
+    margin-top: 8px;
+}
+
+.add_buttons > div > button {
+    display: inline-block;
+    margin: 0;
+    float: left;
+    border-radius: 0;
+}
+
+.add_buttons > div {
+    display: inline-block;
+    border: 2px inset black;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px auto 0;
 }
 
 @media only screen and (max-width: 1360px) {

@@ -58,8 +58,9 @@ function deleteFlashcard(e) {
 window.onload = initListeners();
 
 document.querySelector("button.add_flashcard").addEventListener("click", addFlashcard);
-
-
-
-
-
+document.querySelector(".add_buttons > div > button").addEventListener("click", () => {
+   let amount = document.getElementById("flashcardNumber").value;
+   for(let i = 0; i < amount; i++) {
+       addFlashcard();
+   }
+});
