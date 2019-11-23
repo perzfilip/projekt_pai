@@ -284,7 +284,7 @@ main > section {
     margin-top: 50px;
 }
 
-main > section > h1 {
+main > section > h1, main > form > section > h1 {
     text-align: center;
     font-size: 3em;
 }
@@ -531,7 +531,13 @@ footer section {
     color: black !important;
 }
 
-.sets > section {
+.sets form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sets > form > section {
     min-height: 80vh;
     width: 100%;
 }
@@ -601,7 +607,7 @@ footer section {
     height: 150px;
 }
 
-.list_trigger, .save, .add_flashcard {
+.list_trigger, .save, .add_flashcard, .sets input[type="submit"] {
     border: 1px solid transparent;
     outline: none;
     font-size: 1.1em;
