@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Nauka języka</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -51,27 +52,29 @@ todo (login, zahashowane haslo, imie, nazwisko, status do wyboru, rola do wyboru
                     <span>Nazwisko</span>
                 </div>
             </div>
-            <div class="multi-select">
-                <button type="button" class="list_trigger" onclick="wrap(this);">Rola</button>
-                <div class="list">
-                    <div class="checkbox">
-                        <input type="checkbox" id="R1" name="filterRole">
-                        <label for="R1">uczeń</label>
-                        <span class="bgc"></span>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" id="R2" name="filterRole">
-                        <label for="R2">nauczyciel</label>
-                        <span class="bgc"></span>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" id="R3" name="filterRole">
-                        <label for="R3">admin</label>
-                        <span class="bgc"></span>
+            <div class="filter_buttons">
+                <div class="multi-select">
+                    <button type="button" class="list_trigger" onclick="wrap(this);">Rola</button>
+                    <div class="list">
+                        <div class="checkbox">
+                            <input type="checkbox" id="R1" name="filterRole">
+                            <label for="R1">uczeń</label>
+                            <span class="bgc"></span>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="R2" name="filterRole">
+                            <label for="R2">nauczyciel</label>
+                            <span class="bgc"></span>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="R3" name="filterRole">
+                            <label for="R3">admin</label>
+                            <span class="bgc"></span>
+                        </div>
                     </div>
                 </div>
+                <button type="submit" class="save">Filtruj</button>
             </div>
-            <button type="submit" class="save">Filtruj</button>
         </form>
         <table>
             <tr>
@@ -93,8 +96,8 @@ todo (login, zahashowane haslo, imie, nazwisko, status do wyboru, rola do wyboru
                     </div>
                     <div class="change_buttons">
 
-                            <button type="button" class="deleteButton">usuń</button>
-                            <button type="button" class="modify">modyfikuj</button>
+                        <button type="button" class="deleteButton">usuń</button>
+                        <button type="button" class="modify">modyfikuj</button>
 
                     </div>
                 </td>

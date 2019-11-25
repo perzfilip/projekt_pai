@@ -293,14 +293,14 @@ main > section > h1, main > form > section > h1 {
 
 #fiszki {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: row;
     margin-top: 50px;
     flex-wrap: wrap;
 }
 
 #fiszki article {
-    width: 40vh;
+    width: 100%;
     border-radius: 5px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
     transition: .4s;
@@ -311,8 +311,6 @@ main > section > h1, main > form > section > h1 {
 }
 
 #fiszki article a {
-    width: 100%;
-    height: 100%;
     text-decoration: none;
     color: black;
     padding: 0;
@@ -371,6 +369,8 @@ article:hover .line {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
     transition: .4s;
     margin-top: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 #flashcards_men > div:hover {
@@ -380,9 +380,11 @@ article:hover .line {
 #flashcards_men > div > span {
     font-size: 1.5em;
     font-weight: bolder;
+    width: 80%;
 }
 
 #flashcards_men > div > .icons {
+    width: auto;
     float: right;
 }
 
@@ -901,6 +903,9 @@ margin: 0 auto;
     margin-bottom: 100px;
 }
 
+#user_filter .save {
+    margin-left: 20px;
+}
 .users table {
     text-align: center;
     margin: 0 auto;
@@ -982,6 +987,16 @@ margin: 0 auto;
     .users .input span {
         font-size: 1.3em;
     }
+
+    #flashcards_men > div {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #fiszki > article {
+        flex-basis: 45%;
+    }
 }
 
 @media (max-width: 970px) {
@@ -996,10 +1011,15 @@ margin: 0 auto;
         font-size: 1.3em;
     }
 
-    #user_filter * {
+    #user_filter > * {
         margin-left: 5px;
         margin-right: 5px;
     }
+
+    .user_content div {
+        width: 100%;
+    }
+
     #set_modify, #user_filter {
         flex-wrap: wrap;
         justify-content: space-around;
@@ -1014,5 +1034,90 @@ margin: 0 auto;
         width: 100%;
         font-size: 1.4em;
     }
+
+    .start_page input[type="text"], .start_page input[type="password"] {
+        width: 260px;
+    }
+
+    .start_page input[type="text"], .start_page input[type="password"], .start_page .input span {
+        font-size: 1.2em;
+    }
 }
+
+@media (max-width: 730px) {
+    .sets .save {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+    }
+
+    .one_flashcard {
+        flex-direction: column;
+        position: relative;
+        align-items: flex-start;
+    }
+
+    .one_flashcard .delete {
+        position: absolute;
+        right: 0;
+        bottom: 50px;
+        font-size: 1.3em;
+    }
+
+    .one_flashcard .input {
+        padding: 10px;
+        margin-left: 20px;
+        margin-top: 17px;
+        margin-bottom: 10px;
+    }
+    .one_flashcard .input {
+        width: 90%;
+    }
+
+    .one_flashcard input[type="text"] {
+        width: 350px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    #fiszki > article {
+        flex-basis: 100%;
+    }
+
+    .user_content div {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 615px) {
+
+    #flashcards_men > div {
+        width: 80%;
+    }
+
+    #flashcards_men > div > span, #flashcards_men > div > .icons {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    #flashcards_men > div > .icons {
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 470px) {
+    .one_flashcard input[type="text"] {
+        width: auto;
+    }
+
+    #flashcards_men > div {
+        width: 100%;
+    }
+}
+
+
 
