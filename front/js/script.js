@@ -82,7 +82,9 @@ function deleteFlashcard(e) {
 
 window.onload = initListeners();
 
-
+function burger(ob) {
+    ob.classList.toggle("opened");
+}
 
 
 

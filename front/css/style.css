@@ -72,6 +72,65 @@ nav .logged:hover .logged-content {
     display: flex;
 }
 
+nav#mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    background-color: black;
+    width: 100%;
+}
+
+.burger {
+    width: 100px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.burger div {
+    position: relative;
+}
+
+.burger span {
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    transition: 0.2s;
+    left: 0;
+}
+.burger span:nth-child(1) {
+    top: 0;
+
+}
+.burger span:nth-child(2) {
+    top: 10px;
+}
+.burger span:nth-child(3) {
+    top: 20px;
+}
+
+.opened span:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+}
+
+.opened span:nth-child(2) {
+    opacity: 0;
+}
+
+.opened span:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+}
+
+
+
+#mobile .nav_content {
+    height: 0;
+    display: none;
+}
+
 /*-------------------------------------------*/
 /*STRONA STARTOWA*/
 body.start_page {
@@ -1088,6 +1147,19 @@ margin: 0 auto;
 
     .user_content div {
         font-size: 0.9em;
+    }
+
+    /*=========mobile menu=============*/
+    nav {
+        display: none;
+    }
+
+    nav#mobile {
+        display: block;
+    }
+
+    main {
+        margin-top: 50px;
     }
 }
 

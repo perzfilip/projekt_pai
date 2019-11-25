@@ -23,6 +23,29 @@
         </li>
     </ul>
 </nav>
+<nav id="mobile">
+    <div class="burger" onclick="burger(this);">
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="nav_content">
+        <div class="links">
+            <a href="#">FISZKI</a>
+            <a href="#">ZESTAWY</a>
+            <a href="#">UŻYTKOWNICY</a>
+        </div>
+        <div class="logged_user">
+            <span>ADMIN</span>
+        </div>
+        <div class="logged_user_content">
+            <a href="#">zarządzaj kontem</a>
+            <a href="#">wyloguj</a>
+        </div>
+    </div>
+</nav>
 <main>
     <section>
         <h1>Dostępne zestawy fiszek</h1>
@@ -74,7 +97,7 @@
             </article>
         </section>
     </section>
-<!--    DLA ADMINÓW I NAUCZYCIELI-->
+    <!--    DLA ADMINÓW I NAUCZYCIELI-->
     <section>
         <h1>Zarządzanie fiszkami</h1>
         <section id="flashcards_men">
@@ -113,7 +136,7 @@
     <section>
         <p>Strona stworzona przez Filipa Perza, &copy; 2019</p>
         <p>kontakt: perzfilip@gmail.com</p>
-</section>
+    </section>
 </footer>
 
 <script src="js/script.js"></script>
