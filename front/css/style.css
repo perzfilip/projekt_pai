@@ -525,7 +525,7 @@ footer section {
 
 /*================TWORZENIE ZESTAWOW I MODYFIKACJA===============*/
 
-.sets {
+.sets, .users {
     margin-top: 0;
     min-height: 0;
     color: black !important;
@@ -537,12 +537,12 @@ footer section {
     padding: 0;
 }
 
-.sets > form > section {
+.sets > form > section, .users >  section{
     min-height: 80vh;
     width: 100%;
 }
 
-#set_modify {
+#set_modify, #user_filter {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -607,7 +607,7 @@ footer section {
     height: 150px;
 }
 
-.list_trigger, .save, .add_flashcard, .sets input[type="submit"] {
+.list_trigger, .save, .add_flashcard, .sets input[type="submit"], .deleteButton, .modify {
     border: 1px solid transparent;
     outline: none;
     font-size: 1.1em;
@@ -618,17 +618,26 @@ footer section {
     transition: 0.2s;
 }
 
-.add_flashcard {
-    font-size: 1.3em;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
+.deleteButton {
+    background-color: rgba(185, 0, 14, 0.98);
 }
 
 .save {
     background-color: #2a8eff;
     font-size: 1.3em;
 }
+
+.modify {
+    background-color: #343a40;
+}
+
+.add_flashcard {
+font-size: 1.3em;
+display: block;
+text-align: center;
+margin: 0 auto;
+}
+
 
 .save:hover {
     background-color: #5fcc00;
@@ -638,6 +647,14 @@ footer section {
     background-color: white;
     color: black;
     border: inset 1px black;
+}
+
+.deleteButton:hover {
+    background-color: #940100;
+}
+
+.modify:hover {
+    background-color: #181e24;
 }
 
 .list::-webkit-scrollbar-track {
@@ -845,9 +862,125 @@ footer section {
     margin: 30px auto 0;
 }
 
-@media only screen and (max-width: 1360px) {
-    .one_flashcard {
+.users {
+    margin-bottom: 30px;
+}
+
+.users input[type="text"]:focus + span {
+    color: #0085ff;
+}
+
+.users input[type="text"]:not(:placeholder-shown) + span {
+    color: #0085ff;
+}
+
+.users input[type="text"]:not(:focus) + span {
+    color: black;
+}
+
+.users input[type="text"] {
+    border-bottom: 2px solid black;
+}
+
+.users input[type="text"]:focus {
+    border-bottom: 2px solid #0085ff;
+}
+
+.users input {
+    color: black;
+}
+
+#user_filter .multi-select button {
+    min-width: 170px;
+}
+#user_filter .multi-select .list {
+    overflow: hidden;
+}
+
+#user_filter {
+    margin-bottom: 100px;
+}
+
+.users table {
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 70%;
+    font-size: 1.3em;
+    border-spacing: 0;
+}
+
+.user {
+    transition: 0.2s;
+    user-select: none;
+}
+
+.users tr.user:hover {
+    background-color: #c8c8c8;
+}
+
+.bgc {
+    background-color: #d6d6d6;
+}
+
+.user td {
+    padding: 10px;
+}
+
+.user_content {
+    display: none;
+}
+
+.active {
+    display: table-row;
+}
+
+.active td {
+    border-bottom: 1px solid black;
+}
+
+.users table tr:last-of-type td {
+    border: none !important;
+}
+
+.data, .change_buttons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user_content div {
+    width: 50%;
+    float: left;
+}
+
+
+.user_content p {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.change_buttons button {
+    font-size: 0.9em;
+}
+
+/*========MOBILKA============*/
+@media (max-width: 1360px) {
+    .one_flashcard, .users table {
         width: 90%;
+    }
+
+    .users {
+        font-size: 0.9em;
+    }
+
+    .users input[type="text"] {
+        width: 160px;
+        font-size: 1.3em;
+    }
+
+    .users .input span {
+        font-size: 1.3em;
     }
 }
 
@@ -863,7 +996,11 @@ footer section {
         font-size: 1.3em;
     }
 
-    #set_modify {
+    #user_filter * {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    #set_modify, #user_filter {
         flex-wrap: wrap;
         justify-content: space-around;
     }
@@ -878,11 +1015,4 @@ footer section {
         font-size: 1.4em;
     }
 }
-
-
-
-
-
-
-
 

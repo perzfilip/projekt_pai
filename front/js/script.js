@@ -37,6 +37,31 @@ function initListeners() {
             deleteButtons[i].classList.add("y");
         }
     }
+
+    let addFlashcardButton = document.querySelector("button.add_flashcard");
+    let usersRows = document.querySelectorAll(".user");
+
+    if(addFlashcardButton !== null) {
+        addFlashcardButton.addEventListener("click", addFlashcard);
+        document.querySelector(".add_buttons > div > button").addEventListener("click", () => {
+            let amount = document.getElementById("flashcardNumber").value;
+            for(let i = 0; i < amount; i++) {
+                addFlashcard();
+            }
+        });
+    }
+
+    for(let i=0; i<usersRows.length; i++) {
+        usersRows[i].addEventListener("click", collapsible);
+    }
+}
+
+function collapsible(e) {
+    let ob = e.target;
+    ob = ob.parentNode;
+    ob.classList.toggle("bgc");
+    ob = ob.nextSibling.nextSibling;
+    ob.classList.toggle("active");
 }
 
 function addFlashcard() {
@@ -57,10 +82,7 @@ function deleteFlashcard(e) {
 
 window.onload = initListeners();
 
-document.querySelector("button.add_flashcard").addEventListener("click", addFlashcard);
-document.querySelector(".add_buttons > div > button").addEventListener("click", () => {
-   let amount = document.getElementById("flashcardNumber").value;
-   for(let i = 0; i < amount; i++) {
-       addFlashcard();
-   }
-});
+
+
+
+
