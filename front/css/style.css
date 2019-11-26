@@ -56,15 +56,14 @@ nav .logged-content {
 
 }
 
-nav .logged-content a {
+nav .logged-content a, #mobile .nav_content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-
 }
 
-nav .logged-content a:hover {
+nav .logged-content a:hover, #mobile .nav_content a:hover {
     background-color: #b8b8b8;
 }
 
@@ -80,6 +79,7 @@ nav#mobile {
     height: 50px;
     background-color: black;
     width: 100%;
+    z-index: 1001;
 }
 
 .burger {
@@ -124,12 +124,35 @@ nav#mobile {
     transform: translateY(-10px) rotate(45deg);
 }
 
-
-
 #mobile .nav_content {
+    position: absolute;
+    top: 50px;
+    width: 100%;
     height: 0;
-    display: none;
+    max-height: 300px;
+    overflow: hidden;
+    transition: 0.3s;
+    background-color: white;
 }
+
+.opened + .nav_content {
+    height: 300px !important;
+}
+
+.nav_content a {
+    display: block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logged_user_content {
+    padding-left: 5%;
+    border-bottom: 2px solid black;
+}
+
+
 
 /*-------------------------------------------*/
 /*STRONA STARTOWA*/
@@ -449,6 +472,7 @@ article:hover .line {
 
 .icons i {
     font-size: 1.5em;
+    color: black;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -478,8 +502,12 @@ footer section {
 
 /*=======================================*/
 
+#learn {
+    margin-top: -20%;
+}
+
 .nauka {
-    width: 45%;
+    width: 50%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -488,8 +516,25 @@ footer section {
     flex-direction: row;
 }
 
+.slider {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+}
+
 .slider button i {
     font-size: 3em;
+}
+
+.slider .fa-arrow-down {
+    display: none;
+}
+
+.slider .fa-arrow-up {
+    display: none;
 }
 
 .slider button {
@@ -497,34 +542,22 @@ footer section {
     background-color: transparent;
 }
 
-.slider button:last-of-type {
-    right: 0;
-}
-
-.slider button:first-of-type {
-    left: 0;
-}
-
-.slider {
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .slides {
     position: relative;
-    width: 400px;
-    margin: 20px;
+    width: 500px;
+    height: inherit;
 }
 
 .slide {
     display: none;
     position: absolute;
-    margin: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: 0.3s ease-in-out;
     opacity: 0;
+    width: 400px;
+    height: 200px;
 }
 
 .slide:first-child, .slide:nth-child(2) {
@@ -539,8 +572,8 @@ footer section {
 .flip-card {
     background-color: transparent;
     position: relative;
-    width: 400px;
-    height: 20vh;
+    width: 100%;
+    height: 100%;
     transition: 0.4s;
 }
 
@@ -668,7 +701,12 @@ footer section {
     height: 150px;
 }
 
-.list_trigger, .save, .add_flashcard, .sets input[type="submit"], .deleteButton, .modify {
+.list_trigger,
+.save,
+.add_flashcard,
+.sets input[type="submit"],
+.deleteButton,
+.modify {
     border: 1px solid transparent;
     outline: none;
     font-size: 1.1em;
@@ -1050,11 +1088,28 @@ margin: 0 auto;
     #flashcards_men > div {
         width: 90%;
     }
+
+    .nauka {
+        width: 80%;
+    }
+
 }
 
 @media (max-width: 1000px) {
     #fiszki > article {
         flex-basis: 45%;
+    }
+    /*=========mobile menu=============*/
+    nav {
+        display: none;
+    }
+
+    nav#mobile {
+        display: block;
+    }
+
+    main {
+        margin-top: 50px;
     }
 }
 
@@ -1137,6 +1192,10 @@ margin: 0 auto;
     .one_flashcard input[type="text"] {
         width: 350px;
     }
+
+    .nauka {
+        width: 100%;
+    }
 }
 
 @media (max-width: 650px) {
@@ -1147,19 +1206,6 @@ margin: 0 auto;
 
     .user_content div {
         font-size: 0.9em;
-    }
-
-    /*=========mobile menu=============*/
-    nav {
-        display: none;
-    }
-
-    nav#mobile {
-        display: block;
-    }
-
-    main {
-        margin-top: 50px;
     }
 }
 
@@ -1179,6 +1225,31 @@ margin: 0 auto;
         margin-top: 20px;
     }
 
+    .nauka .fa-arrow-right {
+        display: none;
+    }
+
+    .nauka .fa-arrow-left {
+        display: none;
+    }
+
+    .nauka .fa-arrow-down {
+        display: inline-block;
+    }
+
+    .nauka .fa-arrow-up {
+        display: inline-block;
+    }
+
+    .slider {
+        flex-direction: column;
+        margin-top: 30px;
+        align-items: center;
+    }
+
+    .nauka {
+        overflow: visible;
+    }
 }
 
 @media (max-width: 470px) {
@@ -1190,6 +1261,3 @@ margin: 0 auto;
         width: 100%;
     }
 }
-
-
-

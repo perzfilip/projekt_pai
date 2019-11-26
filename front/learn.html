@@ -7,7 +7,6 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0c34582f69.js" crossorigin="anonymous"></script>
-    <script src="js/slider.js"></script>
 </head>
 <body>
 <nav>
@@ -24,8 +23,31 @@
         </li>
     </ul>
 </nav>
+<nav id="mobile">
+    <div class="burger" onclick="burger(this);">
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="nav_content">
+        <div class="links">
+            <a href="#">FISZKI</a>
+            <a href="#">ZESTAWY</a>
+            <a href="#">UŻYTKOWNICY</a>
+        </div>
+        <div class="logged_user">
+            <a href="javascript:void(0)">ADMIN</a>
+        </div>
+        <div class="logged_user_content">
+            <a href="#">zarządzaj kontem</a>
+            <a href="#">wyloguj</a>
+        </div>
+    </div>
+</nav>
 <main>
-    <section>
+    <section id="learn">
         <h1>Nauka fiszek</h1>
         <section class="nauka">
 
@@ -33,6 +55,7 @@
             <div class="slider">
                 <button onclick="prevSlide()">
                     <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-up"></i>
                 </button>
                 <div class="slides">
                     <div class="slide">
@@ -2354,6 +2377,7 @@
                 </div>
                 <button onclick="nextSlide();">
                     <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-down"></i>
                 </button>
             </div>
 
@@ -2367,6 +2391,6 @@
     </section>
 </footer>
 <script src="js/script.js"></script>
-
+<script src="js/slider.js"></script>
 </body>
 </html>
