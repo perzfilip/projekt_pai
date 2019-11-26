@@ -14,11 +14,11 @@ function sliderInit() {
 
 function nextSlide() {
     if(slidesArray.length>focusedSlide+1) {
-
-        let current = slidesArray[focusedSlide];
-        let next = slidesArray[focusedSlide+1];
-        if(slidesArray.length>focusedSlide+2)
-            slidesArray[focusedSlide + 2].style.display = "block";
+        let temp = focusedSlide;
+        let current = slidesArray[temp];
+        let next = slidesArray[temp+1];
+        if(slidesArray.length>temp+2)
+            slidesArray[temp + 2].style.display = "block";
 
         current.children[0].classList.remove('clicked');
         current.style.transform = "translateY(200px)";
@@ -36,8 +36,9 @@ function nextSlide() {
 
 function prevSlide() {
     if(focusedSlide>=1) {
-        let current = slidesArray[focusedSlide];
-        let next = slidesArray[focusedSlide-1];
+        let temp = focusedSlide;
+        let current = slidesArray[temp];
+        let next = slidesArray[temp-1];
 
         current.children[0].classList.remove('clicked');
         current.style.opacity = 0;
