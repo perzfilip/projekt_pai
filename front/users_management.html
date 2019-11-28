@@ -11,14 +11,14 @@
 <body>
 <nav>
     <ul>
-        <li><a href="#">FISZKI</a></li>
-        <li><a href="#">ZESTAWY</a></li>
-        <li><a href="#">UŻYTKOWNICY</a></li>
+        <li><a href="main.html">STRONA GŁÓWNA</a></li>
+        <li><a href="create_sets.html">DODAJ ZESTAW</a></li>
+        <li><a href="users_management.html">UŻYTKOWNICY</a></li>
         <li class="logged">
             <a class="dropbtn" href="javascript:void(0)">ADMIN</a>
             <div class="logged-content">
-                <a href="#">zarządzaj kontem</a>
-                <a href="#">wyloguj</a>
+                <a href="modify_user.html">zarządzaj kontem</a>
+                <a href="start_page.html">wyloguj</a>
             </div>
         </li>
     </ul>
@@ -33,26 +33,19 @@
     </div>
     <div class="nav_content">
         <div class="links">
-            <a href="#">FISZKI</a>
-            <a href="#">ZESTAWY</a>
-            <a href="#">UŻYTKOWNICY</a>
+            <a href="main.html">STRONA GŁÓWNA</a>
+            <a href="create_sets.html">DODAJ ZESTAW</a>
+            <a href="users_management.html">UŻYTKOWNICY</a>
         </div>
         <div class="logged_user">
             <a href="javascript:void(0)">ADMIN</a>
         </div>
         <div class="logged_user_content">
-            <a href="#">zarządzaj kontem</a>
-            <a href="#">wyloguj</a>
+            <a href="modify_user.html">zarządzaj kontem</a>
+            <a href="start_page.html">wyloguj</a>
         </div>
     </div>
 </nav>
-
-<!--
-todo crud na uzytkownikach
-todo osobna podstrona z formem do dodawania i modyfikacji uzytkownikow
-todo tabela z uzytkownikami
-todo (login, zahashowane haslo, imie, nazwisko, status do wyboru, rola do wyboru, klasa dla uczniow, usuniecie i modyfikacja)
--->
 <main class="users">
     <h1>Zarządzaj użytkownikami</h1>
     <section>
@@ -156,10 +149,8 @@ todo (login, zahashowane haslo, imie, nazwisko, status do wyboru, rola do wyboru
                         <p>klasa: 4D</p>
                     </div>
                     <div class="change_buttons">
-
                         <button type="button" class="deleteButton">usuń</button>
                         <button type="button" class="modify">modyfikuj</button>
-
                     </div>
                 </td>
             </tr>
@@ -205,6 +196,7 @@ todo (login, zahashowane haslo, imie, nazwisko, status do wyboru, rola do wyboru
             </tr>
         </table>
     </section>
+    <button type="button" class="save" id="add_user"><a href="modify_user.html">Dodaj użytkownika</a></button>
 </main>
 <footer>
     <section>
