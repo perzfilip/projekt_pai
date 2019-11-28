@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Nauka języka</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c34582f69.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="#">FISZKI</a></li>
+        <li><a href="#">ZESTAWY</a></li>
+        <li><a href="#">UŻYTKOWNICY</a></li>
+        <li class="logged">
+            <a class="dropbtn" href="javascript:void(0)">ADMIN</a>
+            <div class="logged-content">
+                <a href="#">zarządzaj kontem</a>
+                <a href="#">wyloguj</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<nav id="mobile">
+    <div class="burger" onclick="burger(this);">
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="nav_content">
+        <div class="links">
+            <a href="#">FISZKI</a>
+            <a href="#">ZESTAWY</a>
+            <a href="#">UŻYTKOWNICY</a>
+        </div>
+        <div class="logged_user">
+            <a href="javascript:void(0)">ADMIN</a>
+        </div>
+        <div class="logged_user_content">
+            <a href="#">zarządzaj kontem</a>
+            <a href="#">wyloguj</a>
+        </div>
+    </div>
+</nav>
+<main class="mod_users">
+    <h1>Wpisz dane</h1>
+    <section>
+        <form action="">
+            <div class="input">
+                <div>
+                    <input type="text" name="login" placeholder=" " autocomplete="off">
+                    <span>Login</span>
+                </div>
+            </div>
+            <div class="input">
+                <div>
+                    <input type="password" name="password" placeholder=" " autocomplete="off">
+                    <span>Nowe hasło</span>
+                </div>
+            </div>
+            <div class="input">
+                <div>
+                    <input type="text" name="firstName" placeholder=" " autocomplete="off">
+                    <span>Imię</span>
+                </div>
+            </div>
+            <div class="input">
+                <div>
+                    <input type="text" name="lastName" placeholder=" " autocomplete="off">
+                    <span>Nazwisko</span>
+                </div>
+            </div>
+            <div class="input">
+                <div>
+                    <input type="text" name="status" placeholder=" " autocomplete="off">
+                    <span>Status</span>
+                </div>
+            </div>
+            <div class="special">
+                <div class="multi-select">
+                    <button type="button" class="list_trigger" onclick="wrap(this);">Rola</button>
+                    <div class="list">
+                        <div class="checkbox">
+                            <input type="checkbox" id="R1" name="filterRole">
+                            <label for="R1">uczeń</label>
+                            <span class="bgc"></span>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="R2" name="filterRole">
+                            <label for="R2">nauczyciel</label>
+                            <span class="bgc"></span>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="R3" name="filterRole">
+                            <label for="R3">admin</label>
+                            <span class="bgc"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="multi-select">
+                    <button type="button" class="list_trigger" onclick="wrap(this);">Wybierz klasy</button>
+                    <div class="list">
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox_1" name="class">
+                            <label for="checkbox_1">1D</label>
+                            <span class="bgc"></span>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox_2" name="class">
+                            <label for="checkbox_2">2D</label>
+                            <span class="bgc"></span>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox_3" name="class">
+                            <label for="checkbox_3">3D</label>
+                            <span class="bgc"></span>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox_4" name="class">
+                            <label for="checkbox_4">4D</label>
+                            <span class="bgc"></span>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox_5" name="class">
+                            <label for="checkbox_5">1D</label>
+                            <span class="bgc"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="save">Zapisz</button>
+                <button type="button" class="modify">Cofnij</button>
+            </div>
+        </form>
+    </section>
+</main>
+<footer>
+    <section>
+        <p>Strona stworzona przez Filipa Perza, &copy; 2019</p>
+        <p>kontakt: perzfilip@gmail.com</p>
+    </section>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

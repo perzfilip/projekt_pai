@@ -965,27 +965,38 @@ margin: 0 auto;
     margin-bottom: 30px;
 }
 
-.users input[type="text"]:focus + span {
+.users input[type="text"]:focus + span,
+.mod_users input[type="password"]:focus + span,
+.mod_users input[type="text"]:focus + span {
     color: #0085ff;
 }
 
-.users input[type="text"]:not(:placeholder-shown) + span {
+.users input[type="text"]:not(:placeholder-shown) + span,
+.mod_users input[type="password"]:not(:placeholder-shown) + span,
+.mod_users input[type="text"]:not(:placeholder-shown) + span {
     color: #0085ff;
 }
 
-.users input[type="text"]:not(:focus) + span {
+.users input[type="text"]:not(:focus) + span,
+.mod_users input[type="password"]:not(:focus) + span,
+.mod_users input[type="text"]:not(:focus) + span{
     color: black;
 }
 
-.users input[type="text"] {
+.users input[type="text"],
+.mod_users input[type="password"],
+.mod_users input[type="text"] {
     border-bottom: 2px solid black;
 }
 
-.users input[type="text"]:focus {
+.users input[type="text"]:focus,
+.mod_users input[type="password"]:focus,
+.mod_users input[type="text"]:focus {
     border-bottom: 2px solid #0085ff;
 }
 
-.users input {
+.users input,
+.mod_users input{
     color: black;
 }
 
@@ -1056,7 +1067,6 @@ margin: 0 auto;
     float: left;
 }
 
-
 .user_content p {
     text-align: left;
     margin-left: 20px;
@@ -1066,8 +1076,37 @@ margin: 0 auto;
     font-size: 0.9em;
 }
 
+.mod_users section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mod_users > section > form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.mod_users .modify {
+    font-size: 1.3em;
+}
+
+.mod_users .special > div {
+    height: 250px;
+}
+
+.special .list_trigger {
+    min-width: 180px;
+}
+
+
+
 /*========MOBILKA============*/
 @media (max-width: 1360px) {
+
     .one_flashcard, .users table {
         width: 90%;
     }
@@ -1104,12 +1143,28 @@ margin: 0 auto;
         display: none;
     }
 
+    nav.start_page {
+        display: block !important;
+    }
+
     nav#mobile {
         display: block;
     }
 
     main {
         margin-top: 50px;
+    }
+
+    main.start_page {
+        min-height: 60vh;
+    }
+
+    .back > div {
+        z-index: 2000;
+    }
+
+    .submit > div {
+        z-index: 2000;
     }
 }
 
@@ -1164,6 +1219,14 @@ margin: 0 auto;
         bottom: 20px;
         right: 20px;
         z-index: 100;
+    }
+
+    .login_form, #welcome > div{
+        width: 90%;
+    }
+
+    #welcome {
+        font-size: 0.8em;
     }
 
     .one_flashcard {
@@ -1259,5 +1322,11 @@ margin: 0 auto;
 
     #flashcards_men > div {
         width: 100%;
+    }
+
+    .mod_users input[type="text"],
+    .mod_users input[type="password"],
+    .mod_users .input span {
+        font-size: 1.2em;
     }
 }
