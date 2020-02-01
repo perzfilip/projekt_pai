@@ -17,7 +17,7 @@
     <section class="login_form shadow">
         <h2>Logowanie</h2>
         <div>
-            <form action="./registration.php">
+            <form action="./login.php">
                 <div class="input">
                     <div>
                         <input type="text" name="login" placeholder=" " autocomplete="off" required>

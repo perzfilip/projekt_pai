@@ -1,3 +1,7 @@
+CREATE DATABASE `projekt_pai`;
+
+USE `projekt_pai`;
+
 CREATE TABLE `Users` (
 	`user_id` INT NOT NULL UNIQUE,
 	`login` varchar(30) NOT NULL UNIQUE,

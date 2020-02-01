@@ -1,2 +1,2 @@
 <?php
-    $con = mysqli_connect("localhost", "root", "", "projekt_pai");
+$con = new mysqli("localhost", "root", "", "projekt_pai");
