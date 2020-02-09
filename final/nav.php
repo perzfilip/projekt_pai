@@ -7,7 +7,7 @@
             <a class="dropbtn" href="javascript:void(0)">ADMIN</a>
             <div class="logged-content">
                 <a href="modify_user.php">zarządzaj kontem</a>
-                <a href="start_page.php">wyloguj</a>
+                <a href="logout.php">wyloguj</a>
             </div>
         </li>
     </ul>

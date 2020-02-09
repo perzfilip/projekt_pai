@@ -6,7 +6,7 @@
         $login = $_POST["login"];
         $password = $_POST["password"];
         $dbpassword = "";
-        $sql = $con->prepare("SELECT password FROM users where login = ?");
+        $sql = $con->prepare("SELECT * FROM users where login = ?");
         $sql->bind_param("s", $login);
         $sql->execute();
 
@@ -16,15 +16,18 @@
         if($result->num_rows === 1) {
             while($row = $result->fetch_assoc()) {
                 $dbpassword = $row["password"];
+                $id = $row["user_id"];
             }
         } else {
             echo "blad: wiecej niz jeden użytkownik o tym samym loginie";
         }
 
         if(password_verify($password, $dbpassword)) {
-            echo "wpisano poprawne hasło dla użytkownika";
+            session_start();
+            $_SESSION["user_id"] = $id;
+            header("location: ./main.php");
         } else {
-            echo "wpisane bledne haslo dla danego uzytkownika";
+            header("location: ./start_page.php");
         }
 
 

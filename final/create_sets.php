@@ -1,4 +1,5 @@
 <?php
+    require_once("./Auth_check.php");
     require_once("./head.php");
     require_once("./nav.php");
 ?>

@@ -1,4 +1,4 @@
-CREATE DATABASE `projekt_pai`;
+CREATE DATABASE `projekt_pai` CHARACTER SET utf8 COLLATE utf8_polish_ci;
 
 USE `projekt_pai`;
 
@@ -86,4 +86,14 @@ ALTER TABLE `Sets_to_classes` ADD CONSTRAINT `Sets_to_classes_fk1` FOREIGN KEY (
 ALTER TABLE `users_progress` ADD CONSTRAINT `users_progress_fk0` FOREIGN KEY (`user`) REFERENCES `Users`(`user_id`);
 
 ALTER TABLE `users_progress` ADD CONSTRAINT `users_progress_fk1` FOREIGN KEY (`set`) REFERENCES `Sets`(`set_id`);
+
+INSERT INTO `status` (`status_id`, `statusName`) VALUES ('1', 'Aktywny');
+
+INSERT INTO `classes` (`class_id`, `className`) VALUES ('1', 'ADMIN');
+
+INSERT INTO `roles` (`role_id`, `roleName`) VALUES ('1', 'ADMIN');
+
+INSERT INTO `users` (`user_id`, `login`, `password`, `firstName`, `lastName`, `status`, `role`, `class`) VALUES ('1', 'Admin', '$argon2id$v=19$m=1024,t=2,p=2$dFRyeThDaTNZTkRHeDlsUg$dB6NdybtFDImmKUxuI1B3oNkrst2B26JLI1m76Pn1n4', 'Admin', 'Admin', '1', '1', NULL);
+
+
 
