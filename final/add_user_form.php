@@ -149,7 +149,7 @@ ROLES;
                                 if ($classId == $class) {
                                     echo <<< KLASYA
 <div class="checkbox">
-                            <input type="radio" id="checkbox_$classId" name="class" value="$classId" checked required>
+                            <input type="radio" id="checkbox_$classId" name="class" value="$classId" checked >
                             <label for="checkbox_$classId">$className</label>
                             <span class="bgc"></span>
                         </div>
@@ -157,7 +157,7 @@ KLASYA;
                                 } else {
                                     echo <<< KLASY
 <div class="checkbox">
-                            <input type="radio" id="checkbox_$classId" name="class" value="$classId"  required>
+                            <input type="radio" id="checkbox_$classId" name="class" value="$classId" >
                             <label for="checkbox_$classId">$className</label>
                             <span class="bgc"></span>
                         </div>
