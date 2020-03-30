@@ -17,7 +17,7 @@
     <section class="login_form shadow">
         <h2>Logowanie</h2>
         <div>
-            <form action="./login.php" method="post">
+            <form action="scripts/login.php" method="post">
                 <div class="input">
                     <div>
                         <input type="text" name="login" placeholder=" " autocomplete="off" required>

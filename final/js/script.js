@@ -67,7 +67,7 @@ function collapsible(e) {
 function addFlashcard() {
     let div = document.createElement("div");
     div.classList.add("one_flashcard");
-    div.innerHTML = '<div class="input"><div><input type="text" name="title" placeholder=" " autocomplete="off" required><span>Słówko</span></div></div><div class="input"><div><input type="text" name="title" placeholder=" " autocomplete="off" required><span>Definicja</span></div></div><div class="delete"><button><i class="fas fa-trash-alt"></i></button></div>';
+    div.innerHTML = '<div class="input"><div><input type="text" name="word[]" placeholder=" " autocomplete="off" required><span>Słówko</span></div></div><div class="input"><div><input type="text" name="definition[]" placeholder=" " autocomplete="off" required><span>Definicja</span></div></div><div class="delete"><button><i class="fas fa-trash-alt"></i></button></div>';
     let flashcards = document.querySelector("#flashcards_mod > div");
     console.dir(div);
     div.lastChild.addEventListener("click", deleteFlashcard);

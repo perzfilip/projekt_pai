@@ -1121,6 +1121,11 @@ margin: 0 auto;
     min-width: 180px;
 }
 
+.modify a, .modify a:active, .modify a:hover, .modify a:visited,
+.deleteButton a, .deleteButton a:active, .deleteButton a:hover, .deleteButton a:visited {
+    text-decoration: none;
+    color: white;
+}
 
 
 /*========MOBILKA============*/
