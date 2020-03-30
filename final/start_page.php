@@ -1,5 +1,6 @@
 <?php
     require_once("./head.php");
+
 ?>
 <body class="start_page">
 <nav class="start_page">
@@ -55,5 +56,22 @@
     </section>
 </footer>
 <script src="js/script.js"></script>
+<?php
+if(isset($_GET['err'])) {
+    echo "<script>window.onload = function() {";
+
+    switch($_GET['err']) {
+        case 1:
+            echo 'alert("niepoprawny login lub hasło");';
+            break;
+        case 2:
+            echo 'alert("pomyślnie wylogowano");';
+            break;
+    }
+    echo "};</script>";
+
+
+}
+?>
 </body>
 </html>

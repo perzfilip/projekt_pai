@@ -23,7 +23,7 @@
                 $login = $row['login'];
             }
         } else {
-            header("location: ./start_page.php");
+            header("location: ./start_page.php?err=1");
         }
 
         if(password_verify($password, $dbpassword)) {
@@ -36,7 +36,7 @@
 
             header("location: ../main.php");
         } else {
-            header("location: ../start_page.php");
+            header("location: ../start_page.php?err=1");
         }
 
 
